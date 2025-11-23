@@ -4,23 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>passage de donnees entre pages</title>
+    <title>passage de donnees cote serveur</title>
 </head>
 
 <body>
-    <h2>Envoie par form (get ou post)</h2>
-    <form action="b.php" method="get">
-        Libelle : <input type="text" name="libelle" id="">
-        Prix: <input type="text" name="prix" id="">
-        Quantite: <input type="text" name="quantite" id="">
-        <button>Envoyer</button>
 
+    <h2>envoi via form </h2>
+
+    <form action="b.php" method="post">
+        prix <input type="text" name="prix" id="">
+        qte <input type="text" name="qte" id="">
+        <button>envoyer</button>
     </form>
-
-    <a href="details.php?libelle=hp">HP</a> <br>
-    <a href="details.php?libelle=dell">DELL</a> <br>
-
-
+    <hr>
+    <a href="c.php?lib=hp">HP</a> <br>
+    <a href="c.php?lib=dell">DELL</a>
 </body>
 
 </html>

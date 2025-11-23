@@ -1,10 +1,8 @@
 <?php 
-//recuperer les donnees envoyer depuis a.php 
-//par get
-$lib=$_GET['libelle'];
-$prix=$_GET['prix'];
-$qte=$_GET['quantite'];
-$total=$prix*$qte;
+//recuperer les donnees envoyes par a.php a cette page b.php
+$p=$_POST['prix'];
+$q=$_POST['qte'];
+$total=$p*$q;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +12,8 @@ $total=$prix*$qte;
     <title>Document</title>
 </head>
 <body>
-    <h2>le total du produit <?php echo $lib;?>  est : <?php echo $total;?>DHS</h2>
-    
+    <h3>Le prix : <?php echo $p;?></h3>
+    <h3>La quantite : <?php echo $q;?></h3>
+    <h4>Le total : <?php echo $total;?>DHS</h4>
 </body>
 </html>
