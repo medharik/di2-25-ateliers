@@ -6,15 +6,10 @@
 function connecter_db()
 {
 
-    $host = 'localhost'; // Or your database host
-    $dbname = 'phpdb';
-    $username = 'root';
-    $password = '';
+    //gestion des exceptions
+       try {
 
-    try {
-
-        $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
-        $pdo = new PDO($dsn, $username, $password);
+        $pdo = new PDO("mysql:host=loclahost;dbname=phpdb", "root", "");
 
         // Set PDO to throw exceptions on errors, which is recommended for error handling
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
