@@ -20,6 +20,7 @@
       <th scope="col">#</th>
       <th scope="col">libelle</th>
       <th scope="col">prix</th>
+      <th scope="col">image</th>
       <th scope="col">actions</th>
     </tr>
     
@@ -34,6 +35,18 @@
         <th scope="row"><?=$produit['id']?></th>
         <td><?=$produit['libelle']?></td>
         <td><?=$produit['prix']?></td>
+
+        <td>
+        <?php 
+        if(!empty($produit['chemin'])){
+        ?>
+          <img width="150" src="<?=$produit['chemin']?>" alt="<?=$produit['libelle']?>">
+        <?php } else { ?>
+
+<h6>Le produit <?=$produit['libelle']?> n'a pas d'image</h6>
+          <?php }?></td>
+        
+        </td>
         <td><a onclick="return confirm('supprimer?');" href="test-delete.php?id=<?=$produit['id']?>" class="btn btn-danger">-</a></td>
     </tr>
     

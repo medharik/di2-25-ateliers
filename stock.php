@@ -18,6 +18,7 @@ $stock=[$hp,$dell,$sony,$acer];
     <h1>Produits en stock</h1>
     <h2>liste des <?=count($stock)?> Produits</h2>
  
+ 
 <table class="table">
   <thead>
     <tr>
