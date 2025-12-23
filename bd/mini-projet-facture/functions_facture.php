@@ -73,12 +73,9 @@ WHERE numero = ?;");
 
 function all_factures()
 {
-
     try {
         //connexion bd
-
         $cnx = connecter_db();
-
         // ds cette connexion , on prepare une requete sql
         $r = $cnx->prepare("select * from facture order by numero desc ");
         $r->execute();
@@ -89,6 +86,23 @@ function all_factures()
         echo "erreur  de selection des factures  " . $th->getMessage();
     }
 
+}
+function all_facture_client()
+{
+    try {
+        //connexion bd
+        $cnx = connecter_db();
+        // ds cette connexion , on prepare une requete sql
+        $r = $cnx->prepare("select c.nom,c.prenom,f.* from client c
+         join facture f on c.id=f.client_id
+ ");
+        $r->execute();
+        $factures = $r->fetchAll();
+        return $factures;
+        // on execute cette requete
+    } catch (\Throwable $th) {
+        echo "erreur  de selection des factures  " . $th->getMessage();
+    }
 
 }
 // $p=all_products();

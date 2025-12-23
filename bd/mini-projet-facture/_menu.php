@@ -9,9 +9,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
-        </li>
+        </li> -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Clients
@@ -19,6 +19,16 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="create-client.php">Nouveau</a></li>
             <li><a class="dropdown-item" href="index-client.php">Liste</a></li>
+    
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Factures
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="create-facture.php">Nouveau</a></li>
+            <li><a class="dropdown-item" href="index-facture.php">Liste</a></li>
     
           </ul>
         </li>
